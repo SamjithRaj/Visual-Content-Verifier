@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project: AI-Generated Media Detection</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- MathJax for LaTeX Rendering -->
+    <script>
+        MathJax = {
+          tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']]
+          },
+          svg: {
+            fontCache: 'global'
+          }
+        };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+
+    <style>
+        /* Use the Inter font family */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom styles for a slightly more academic look */
+        h1, h2 {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 dark:bg-slate-900 text-slate-800 dark:text-slate-300 antialiased">
+
+    <!-- Main Container -->
+    <div class="container mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+
+        <!-- Header Section -->
+        <header class="text-center mb-10">
+            <h1 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white tracking-tight">
+                A Framework for Detecting AI-Generated Manipulations in Digital Media
+            </h1>
+            <p class="mt-4 text-lg text-slate-600 dark:text-slate-400">
+                A Research Project in Digital Media Forensics
+            </p>
+        </header>
+
+        <!-- Author & Info Section -->
+        <div class="text-center mb-12 p-4 border-y border-slate-200 dark:border-slate-700">
+            <p class="font-semibold text-slate-900 dark:text-white">Samjith Raj Bondla</p>
+            <p class="text-sm text-slate-500 dark:text-slate-400">Department of CSE (AI&ML), Vignan Institute of Technology and Science</p>
+            <a href="#" class="mt-2 inline-block bg-slate-800 hover:bg-slate-700 text-white font-semibold py-2 px-4 rounded-lg text-sm transition-colors duration-200">
+                View on GitHub
+            </a>
+        </div>
+
+
+        <!-- Abstract Content -->
+        <main class="space-y-8">
+            <h2 class="text-2xl font-bold text-center text-slate-900 dark:text-white border-b border-slate-200 dark:border-slate-700 pb-2 mb-6">Abstract</h2>
+            
+            <!-- Background Section -->
+            <section>
+                <h3 class="text-xl font-semibold mb-3 text-slate-900 dark:text-white">Background</h3>
+                <p class="text-base leading-relaxed">
+                    The democratization of advanced AI, particularly through technologies like Generative Adversarial Networks (GANs), Variational Autoencoders (VAEs), and diffusion models, has led to a paradigm shift in digital content creation and manipulation. AI-powered editing software now enables users to perform complex alterations—such as semantic object insertion/removal, domain translation (e.g., style transfer), and subtle photometric enhancements—with unprecedented realism and ease. This proliferation poses a significant threat to the perceived integrity of visual media, with profound implications for digital forensics, journalistic ethics, and the spread of disinformation. Consequently, developing reliable, automated methods to verify media authenticity is a pressing scientific and societal challenge.
+                </p>
+            </section>
+
+            <!-- Objective Section -->
+            <section>
+                <h3 class="text-xl font-semibold mb-3 text-slate-900 dark:text-white">Objective</h3>
+                <p class="text-base leading-relaxed">
+                    This research project is dedicated to the design, implementation, and rigorous evaluation of a deep learning framework for the automated detection of AI-generated manipulations in images and videos. The primary objective is to engineer a robust classification model that not only achieves high accuracy but also generalizes effectively across a wide array of manipulation techniques, including those not seen during training. The framework will be designed to identify the subtle, systemic artifacts and statistical fingerprints that are intrinsic to AI synthesis processes but are typically imperceptible to human observers.
+                </p>
+            </section>
+
+            <!-- Methodology Section -->
+            <section>
+                <h3 class="text-xl font-semibold mb-3 text-slate-900 dark:text-white">Methodology</h3>
+                <p class="text-base leading-relaxed">
+                    The core of our proposed solution is a Convolutional Neural Network (CNN), likely leveraging a state-of-the-art architecture such as EfficientNet or a Vision Transformer (ViT) as a foundational feature extractor. The model may be augmented with an attention mechanism to enhance its ability to localize manipulated regions within an image. For video analysis, the architecture will be extended to incorporate temporal information, potentially using a 3D CNN or a recurrent structure (e.g., LSTM) to detect inconsistencies across frames. The model will be trained on a large-scale, purpose-built dataset, comprising thousands of original-manipulated pairs. This dataset will encompass diverse content types and a wide spectrum of AI edits generated from various publicly available and proprietary tools to ensure comprehensive coverage and prevent overfitting to a specific algorithm's signature.
+                </p>
+            </section>
+            
+            <!-- Evaluation Section -->
+            <section>
+                <h3 class="text-xl font-semibold mb-3 text-slate-900 dark:text-white">Evaluation</h3>
+                <p class="text-base leading-relaxed">
+                    The model's efficacy will be quantitatively evaluated on a sequestered test set, which includes manipulation techniques and source media entirely unseen during training and validation phases. Performance will be measured using a suite of standard metrics: overall accuracy, precision, recall, and the $F_1$-score will assess the primary classification capability. Furthermore, the Receiver Operating Characteristic (ROC) curve and the corresponding Area Under the Curve (AUC) will be analyzed to provide a more nuanced understanding of the model's discriminative power across different decision thresholds.
+                </p>
+            </section>
+
+            <!-- Implications Section -->
+            <section>
+                <h3 class="text-xl font-semibold mb-3 text-slate-900 dark:text-white">Implications</h3>
+                <p class="text-base leading-relaxed">
+                    A successful outcome of this project will yield a practical and scientifically-grounded tool for digital media forensics and authenticity verification. Key applications include integration into newsroom workflows for rapid source validation, deployment on social media platforms to automatically flag potentially manipulated content, and use by legal and forensic experts to assess the veracity of digital evidence. This research contributes directly to the vital, ongoing effort to build a more resilient and trustworthy digital information ecosystem and to develop countermeasures against sophisticated forms of digital deception.
+                </p>
+            </section>
+        </main>
+        
+        <!-- Footer -->
+        <footer class="text-center mt-16 pt-6 border-t border-slate-200 dark:border-slate-700">
+            <p class="text-sm text-slate-500 dark:text-slate-400">&copy; 2025. All Rights Reserved.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
